@@ -6,7 +6,7 @@
 
 A modern real-time chat application built with MERN stack and Socket.IO for instant messaging.
 
-![QuickChat Preview](./screenshots/preview.png)
+![QuickChat Preview](![image](https://github.com/user-attachments/assets/90dd700b-cfcc-48b4-ad13-719630917ce0))
 
 ## ✨ Features
 - 🔒 JWT Authentication (Login/Signup)
