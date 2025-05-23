@@ -1,4 +1,4 @@
- import mongoose from "mongoose";
+import mongoose from "mongoose";
 
 // Function to connect to the mongodb database
 export const connectDB = async () =>{
