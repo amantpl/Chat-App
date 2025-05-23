@@ -36,9 +36,4 @@ A full-stack realtime chat application with instant messaging, online status tra
 ![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socket.io&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?logo=cloudinary&logoColor=white)
 
-## 🚀 Installation
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/QuickChat.git
-cd QuickChat
