@@ -1,39 +1,45 @@
 # 💬 QuickChat - Realtime Chat Application
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://quickchat-app.vercel.app)
-[![GitHub license](https://img.shields.io/github/license/yourusername/QuickChat)](https://github.com/yourusername/QuickChat)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/QuickChat)](https://github.com/yourusername/QuickChat/stargazers)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://chat-app-4roq.vercel.app/login)
+[![GitHub license](https://img.shields.io/github/license/ChetanSaini12/QuickChat)](https://github.com/ChetanSaini12/QuickChat/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ChetanSaini12/QuickChat)](https://github.com/ChetanSaini12/QuickChat/stargazers)
 
-A full-stack realtime chat application with instant messaging, online status tracking, and secure user authentication.
+A modern real-time chat application built with MERN stack and Socket.IO for instant messaging.
 
-![QuickChat Preview](https://raw.githubusercontent.com/yourusername/QuickChat/main/screenshots/preview.png)
+![QuickChat Preview](./screenshots/preview.png)
 
 ## ✨ Features
-
-- 🔐 JWT Authentication (Login/Signup)
+- 🔒 JWT Authentication (Login/Signup)
 - ⚡ Real-time messaging with Socket.IO
-- 🟢 Online/Offline user status indicators
-- 📸 Image sharing support (Cloudinary integration)
-- 👁️ Message seen status tracking
-- 🔍 Instant user search functionality
-- 📱 Fully responsive mobile-first design
-- ✏️ Profile customization with bio and avatar
-- 📈 Active user tracking with WebSockets
-- 🔔 Real-time notifications for new messages
+- 📸 Image sharing via Cloudinary
+- 🟢 Online/Offline status indicators
+- 🔍 Search users functionality
+- 📱 Mobile-responsive design
+- 👁️ Message seen notifications
+- ✏️ Profile customization (Bio & Avatar)
 
 ## 🛠️ Tech Stack
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-**Frontend:**  
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwind-css&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white)
-![Socket.IO Client](https://img.shields.io/badge/Socket.IO-010101?logo=socket.io&logoColor=white)
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white)
 
-**Backend:**  
-![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
-![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socket.io&logoColor=white)
-![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?logo=cloudinary&logoColor=white)
+## 🚀 Getting Started
+### Prerequisites
+- Node.js (v18+)
+- MongoDB Atlas account
+- Cloudinary account
+
+### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/ChetanSaini12/QuickChat.git
+cd QuickChat
 
 
