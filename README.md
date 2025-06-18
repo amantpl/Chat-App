@@ -1,45 +1,156 @@
-# 💬 QuickChat - Realtime Chat Application
+**QuickChat**
+*Realtime Chat Application* 💬
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://chat-app-4roq.vercel.app/login)
-[![GitHub license](https://img.shields.io/github/license/ChetanSaini12/QuickChat)](https://github.com/ChetanSaini12/QuickChat/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/ChetanSaini12/QuickChat)](https://github.com/ChetanSaini12/QuickChat/stargazers)
+---
 
-A modern real-time chat application built with MERN stack and Socket.IO for instant messaging.
+## 📋 Table of Contents
 
-![QuickChat Preview](![image](https://github.com/user-attachments/assets/90dd700b-cfcc-48b4-ad13-719630917ce0))
+1. [✨ Overview](#-overview)
+2. [🔥 Features](#-features)
+3. [🛠️ Tech Stack](#️-tech-stack)
+4. [🚀 Quick Start](#-quick-start)
+5. [🗂️ Project Structure](#️-project-structure)
+6. [💡 Key Components](#-key-components)
+7. [🤝 Contributing](#-contributing)
+8. [📄 License](#-license)
 
-## ✨ Features
-- 🔒 JWT Authentication (Login/Signup)
-- ⚡ Real-time messaging with Socket.IO
-- 📸 Image sharing via Cloudinary
-- 🟢 Online/Offline status indicators
-- 🔍 Search users functionality
-- 📱 Mobile-responsive design
-- 👁️ Message seen notifications
-- ✏️ Profile customization (Bio & Avatar)
+---
+
+## ✨ Overview
+
+QuickChat is a modern real-time chat application built on the MERN stack with Socket.IO for instant messaging. It offers secure authentication, media sharing, and seamless conversations—on desktop and mobile.
+
+---
+
+## 🔥 Features
+
+* 🔒 **JWT Authentication**: Secure login & signup
+* ⚡ **Real-Time Messaging**: Powered by Socket.IO
+* 📸 **Image Sharing**: Upload & display via Cloudinary
+* 🟢 **Status Indicators**: Online/offline presence
+* 🔍 **User Search**: Find friends instantly
+* 👁️ **Read Receipts**: Know when messages are seen
+* ✏️ **Profile Customization**: Set bio & avatar
+* 📱 **Responsive Design**: Chat on any device
+
+---
 
 ## 🛠️ Tech Stack
-### Frontend
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-### Backend
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white)
+| Layer         | Technologies |
+| ------------- | ------------ |
+| **Frontend**  |              |
+|               |              |
+|               |              |
+| **Backend**   |              |
+|               |              |
+|               |              |
+|               |              |
+| **Utilities** |              |
+|               |              |
 
-## 🚀 Getting Started
-### Prerequisites
-- Node.js (v18+)
-- MongoDB Atlas account
-- Cloudinary account
+---
 
-### Installation
-1. Clone the repository
-```bash
-git clone https://github.com/ChetanSaini12/QuickChat.git
-cd QuickChat
+## 🚀 Quick Start
 
+**Prerequisites**
 
+* Node.js (v18+)
+* MongoDB Atlas account
+* Cloudinary account
+
+1. **Clone & install dependencies**
+
+   ```bash
+   git clone https://github.com/ChetanSaini12/QuickChat.git
+   cd QuickChat
+   npm install
+   ```
+
+2. **Configure environment variables**
+
+   * Create a `.env` at project root with:
+
+     ```ini
+     MONGO_URI=your_mongodb_uri
+     JWT_SECRET=your_jwt_secret
+     CLOUDINARY_CLOUD_NAME=your_cloud_name
+     CLOUDINARY_API_KEY=your_api_key
+     CLOUDINARY_API_SECRET=your_api_secret
+     ```
+
+3. **Run the application**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open** [http://localhost:3000](http://localhost:3000) and start chatting!
+
+---
+
+## 🗂️ Project Structure
+
+```
+QuickChat/
+├── client/              # React frontend
+│   ├── public/          # Static assets (avatars, etc.)
+│   └── src/
+│       ├── components/  # UI components (ChatWindow, LoginForm)
+│       ├── context/     # Auth & socket context
+│       ├── pages/       # Route views
+│       └── utils/       # API services & helpers
+├── server/              # Express backend
+│   ├── config/          # DB & Cloudinary setup
+│   ├── controllers/     # Route handlers
+│   ├── models/          # Mongoose schemas
+│   ├── routes/          # API endpoints
+│   └── middleware/      # Auth & error handling
+├── .env                 # Environment variables
+└── README.md            # Documentation
+```
+
+---
+
+## 💡 Key Components
+
+### ChatWindow Component
+
+```jsx
+import { useEffect, useState, useContext } from 'react';
+import { SocketContext } from '../context/socket';
+
+const ChatWindow = ({ roomId }) => {
+  const socket = useContext(SocketContext);
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    socket.emit('join', roomId);
+    socket.on('message', msg => setMessages(prev => [...prev, msg]));
+    return () => socket.off('message');
+  }, [roomId]);
+
+  return (
+    <div className="chat-window">
+      {messages.map((m,i) => <p key={i}><strong>{m.user}:</strong> {m.text}</p>)}
+    </div>
+  );
+};
+export default ChatWindow;
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/awesome-chat`
+3. Commit your changes: `git commit -m "feat: add new feature"`
+4. Push: `git push origin feature/awesome-chat`
+5. Open a Pull Request
+
+Please adhere to the code style and write tests where appropriate.
+
+---
+
+##
