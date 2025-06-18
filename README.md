@@ -1,7 +1,21 @@
-**QuickChat**
+**QuickChat** - 
 *Realtime Chat Application* 💬
 
 ---
+
+<div align="center">
+  <img src="client/public/screenshot.jpg" alt="QuickBlog Banner" />
+  <h3>A responsive web-based blogging platform for writers and readers</h3>
+  <br />
+</div>
+
+---
+
+## 🖥️ Live Demo
+
+---
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-QuickBlog-2ea44f?style=for-the-badge\&logo=vercel\&logoColor=white)](https://quick-blog-sooty.vercel.app/)
 
 ## 📋 Table of Contents
 
