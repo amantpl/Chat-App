@@ -5,71 +5,68 @@
 
 ## 📋 Table of Contents
 
-1. [✨ Overview](#-overview)
-2. [🔥 Features](#-features)
-3. [🛠️ Tech Stack](#️-tech-stack)
-4. [🚀 Quick Start](#-quick-start)
-5. [🗂️ Project Structure](#️-project-structure)
-6. [💡 Key Components](#-key-components)
-7. [🤝 Contributing](#-contributing)
-8. [📄 License](#-license)
+1. [✨ Overview](#✨-overview)
+2. [🔥 Features](#🔥-features)
+3. [🛠️ Tech Stack](#🛠️-tech-stack)
+4. [🚀 Quick Start](#🚀-quick-start)
+5. [🗂️ Project Structure](#🗂️-project-structure)
+6. [💡 Key Components](#💡-key-components)
+7. [🤝 Contributing](#🤝-contributing)
+8. [📄 License](#📄-license)
 
 ---
 
 ## ✨ Overview
 
-QuickChat is a modern real-time chat application built on the MERN stack with Socket.IO for instant messaging. It offers secure authentication, media sharing, and seamless conversations—on desktop and mobile.
+QuickChat is a real-time chat application featuring secure authentication, instant messaging powered by Socket.IO, and seamless media sharing—all wrapped in a responsive, user-friendly interface.
 
 ---
 
 ## 🔥 Features
 
-* 🔒 **JWT Authentication**: Secure login & signup
-* ⚡ **Real-Time Messaging**: Powered by Socket.IO
-* 📸 **Image Sharing**: Upload & display via Cloudinary
-* 🟢 **Status Indicators**: Online/offline presence
-* 🔍 **User Search**: Find friends instantly
+* 🔒 **JWT Authentication**: Secure login & signup flows
+* ⚡ **Real-Time Messaging**: Bi-directional chat via Socket.IO
+* 📸 **Image Sharing**: Upload & display images via Cloudinary
+* 🟢 **Presence Indicators**: See who’s online/offline
+* 🔍 **User Search**: Quickly find contacts
 * 👁️ **Read Receipts**: Know when messages are seen
-* ✏️ **Profile Customization**: Set bio & avatar
-* 📱 **Responsive Design**: Chat on any device
+* ✏️ **Profile Customization**: Set avatar & bio
+* 📱 **Responsive Design**: Optimized for desktop & mobile
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer         | Technologies |
-| ------------- | ------------ |
-| **Frontend**  |              |
-|               |              |
-|               |              |
-| **Backend**   |              |
-|               |              |
-|               |              |
-|               |              |
-| **Utilities** |              |
-|               |              |
+| Layer         | Technologies                                   |
+| ------------- | ---------------------------------------------- |
+| **Frontend**  | React 18 · Tailwind CSS · React Router         |
+| **Backend**   | Node.js 20 · Express 4 · MongoDB 6 · Socket.IO |
+| **Utilities** | Axios · Cloudinary                             |
 
 ---
 
 ## 🚀 Quick Start
 
-**Prerequisites**
+**Prerequisites**:
 
-* Node.js (v18+)
+* Node.js v18+
 * MongoDB Atlas account
 * Cloudinary account
 
-1. **Clone & install dependencies**
+1. **Clone the repo**
 
    ```bash
    git clone https://github.com/ChetanSaini12/QuickChat.git
    cd QuickChat
+   ```
+2. **Install dependencies**
+
+   ```bash
    npm install
    ```
+3. **Configure**
 
-2. **Configure environment variables**
-
-   * Create a `.env` at project root with:
+   * Create a `.env` file at project root:
 
      ```ini
      MONGO_URI=your_mongodb_uri
@@ -78,14 +75,12 @@ QuickChat is a modern real-time chat application built on the MERN stack with So
      CLOUDINARY_API_KEY=your_api_key
      CLOUDINARY_API_SECRET=your_api_secret
      ```
-
-3. **Run the application**
+4. **Start the app**
 
    ```bash
    npm run dev
    ```
-
-4. **Open** [http://localhost:3000](http://localhost:3000) and start chatting!
+5. **Visit** [http://localhost:3000](http://localhost:3000) to start chatting.
 
 ---
 
@@ -94,9 +89,9 @@ QuickChat is a modern real-time chat application built on the MERN stack with So
 ```
 QuickChat/
 ├── client/              # React frontend
-│   ├── public/          # Static assets (avatars, etc.)
+│   ├── public/          # Static assets (e.g., screenshot.png)
 │   └── src/
-│       ├── components/  # UI components (ChatWindow, LoginForm)
+│       ├── components/  # ChatWindow, LoginForm, etc.
 │       ├── context/     # Auth & socket context
 │       ├── pages/       # Route views
 │       └── utils/       # API services & helpers
@@ -106,7 +101,7 @@ QuickChat/
 │   ├── models/          # Mongoose schemas
 │   ├── routes/          # API endpoints
 │   └── middleware/      # Auth & error handling
-├── .env                 # Environment variables
+├── .env                 # Env variables
 └── README.md            # Documentation
 ```
 
@@ -114,7 +109,7 @@ QuickChat/
 
 ## 💡 Key Components
 
-### ChatWindow Component
+**ChatWindow\.jsx**
 
 ```jsx
 import { useEffect, useState, useContext } from 'react';
@@ -132,7 +127,9 @@ const ChatWindow = ({ roomId }) => {
 
   return (
     <div className="chat-window">
-      {messages.map((m,i) => <p key={i}><strong>{m.user}:</strong> {m.text}</p>)}
+      {messages.map((m,i) => (
+        <p key={i}><strong>{m.user}:</strong> {m.text}</p>
+      ))}
     </div>
   );
 };
@@ -143,14 +140,16 @@ export default ChatWindow;
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/awesome-chat`
-3. Commit your changes: `git commit -m "feat: add new feature"`
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/awesome-chat`
+3. Commit: `git commit -m "feat: add new feature"`
 4. Push: `git push origin feature/awesome-chat`
-5. Open a Pull Request
+5. Open a PR
 
-Please adhere to the code style and write tests where appropriate.
+Please follow code standards and include tests where possible.
 
 ---
 
-##
+---
+
+*Made by Aman Thapliyal*
