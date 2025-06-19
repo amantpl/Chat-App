@@ -15,7 +15,7 @@
 
 ---
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-QuickBlog-2ea44f?style=for-the-badge\&logo=vercel\&logoColor=white)](https://chat-app-4roq.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-ChatApp-2ea44f?style=for-the-badge\&logo=vercel\&logoColor=white)](https://chat-app-4roq.vercel.app/)
 
 ## 📋 Table of Contents
 
